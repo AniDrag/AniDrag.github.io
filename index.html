@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan | Gameplay & Tools Programmer</title>
+    <meta name="description" content="Professional portfolio of a Gameplay & Tools Programmer specializing in systems, mechanics, and developer tooling for AAA games.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "deep-purple": "#2d1b69",
+                        "ebony-blue": "#0a192f",
+                        "ebony-red": "#8b0000",
+                        "code-bg": "#1e1e1e",
+                        "terminal-green": "#4ec9b0",
+                        "accent-blue": "#569cd6"
+                    },
+                    fontFamily: {
+                        "mono": ["JetBrains Mono", "monospace"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        "glow": "0 0 15px rgba(86, 156, 214, 0.3)",
+                        "glow-purple": "0 0 15px rgba(45, 27, 105, 0.5)"
+                    },
+                    animation: {
+                        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0a0a0a;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1rem;
+        }
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #2d1b69, #569cd6);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(86, 156, 214, 0.2);
+        }
+        .tech-art-content {
+            transition: max-height 0.5s ease-out;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-gray-300 font-sans">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-ebony-blue/95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="#home" class="text-2xl font-mono font-bold text-white hover:text-accent-blue transition-colors duration-300">AniDrag</a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="nav-links" class="hidden md:flex space-x-8 mt-4 md:mt-0">
+                    <a href="#gameplay-systems" class="font-mono text-sm hover:text-accent-blue transition-colors duration-300">Gameplay Systems</a>
+                    <a href="#tools-workflow" class="font-mono text-sm hover:text-accent-blue transition-colors duration-300">Tools & Workflow</a>
+                    <a href="#projects" class="font-mono text-sm hover:text-accent-blue transition-colors duration-300">Projects</a>
+                    <a href="#about" class="font-mono text-sm hover:text-accent-blue transition-colors duration-300">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="container mx-auto px-4 py-12">
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-8">
+                        <h1 class="text-5xl md:text-7xl font-mono font-bold text-white mb-4">Nik Oblak</h1>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <h2 class="text-2xl md:text-3xl font-mono text-terminal-green">Gameplay & Tools Programmer</h2>
+                            <span class="text-accent-blue animate-pulse-slow">|</span>
+                        </div>
+                        <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+                            Gameplay and tool focused engineering student with hands on experience developing player systems, 
+                            movement mechanics, and editor tooling in Unity engine. Strongly habit of writing clean, optimized, 
+                            and extensible code that improves both player experience and developer workflows. 
+                            Experience in rapid iteration and system driven design, with long term goal of specializing in g
+                            ameplay and tool development withing AAA engine environment.
+
+
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/AniDrag" 
+                           target="_blank"  
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-6 py-3 bg-deep-purple hover:bg-deep-purple/80 text-white font-mono text-sm rounded-lg border border-gray-800 card-hover">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>                        
+                        <a href="https://anidrag.itch.io/" 
+                           target="_blank"  
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-6 py-3 bg-deep-purple hover:bg-deep-purple/80 text-white font-mono text-sm rounded-lg border border-gray-800 card-hover">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Itch.io
+                        </a>
+                        <a href="#"
+                           target="_blank"  
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white font-mono text-sm rounded-lg border border-gray-800 card-hover">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download CV
+                        </a>
+                        <a href="mailto:xxsoullessxxaye@gmail.com" class="inline-flex items-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white font-mono text-sm rounded-lg border border-gray-800 card-hover">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gameplay Systems -->
+        <section id="gameplay-systems" class="py-20 bg-code-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-mono font-bold text-white mb-12">Gameplay Systems</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Movement System Card -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/400/300?random=1" alt="Movement system visualization showing character locomotion" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-mono font-bold text-white mb-2">Movement System</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Advanced character locomotion with acceleration curves, slope handling, and momentum preservation. 
+                                Implemented using physics-based approach with configurable parameters for weight, responsiveness, and environmental interaction.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Unreal Engine</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Physics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- State Machines Card -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/400/300?random=2" alt="State machine diagram showing character states and transitions" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-mono font-bold text-white mb-2">State Machines</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Hierarchical state machine implementation for character behavior with blend spaces, transition conditions, 
+                                and animation layering. Supports complex behaviors like combat stances, traversal modes, and interaction states.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Blueprint</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Animation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input & Feel Tuning Card -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <div class="mb-4">
+                            <div class="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/400/300?random=3" alt="Input response curves and tuning parameters visualization" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-mono font-bold text-white mb-2">Input & Feel Tuning</h3>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Responsive input system with deadzone customization, response curves, and platform-specific tuning. 
+                                Includes extensive instrumentation for measuring input latency and feel across different control schemes.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Input</span>
+                                <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Workflow -->
+        <section id="tools-workflow" class="py-20 bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-mono font-bold text-white mb-12">Tools & Workflow</h2>
+                
+                <div class="space-y-12">
+                    <!-- Editor Tools -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-gray-900 rounded-xl border border-gray-800 p-6">
+                            <h3 class="text-xl font-mono font-bold text-white mb-4">Editor Tools</h3>
+                            <p class="text-gray-400 mb-4">
+                                Custom editor extensions for rapid iteration and data management. Includes asset batch processors, 
+                                level design utilities, and automated validation systems.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Reduced level setup time by 70%</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Automated validation of 200+ asset types</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl p-4 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="font-mono text-sm text-gray-400 mb-2">Before/After Comparison</div>
+                                <div class="text-terminal-green font-mono">Workflow efficiency: +300%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Debug Tools -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-gray-900 rounded-xl border border-gray-800 p-6">
+                            <h3 class="text-xl font-mono font-bold text-white mb-4">Debug Tools</h3>
+                            <p class="text-gray-400 mb-4">
+                                In-game debugging systems with visualizations for AI behavior, physics interactions, 
+                                and network replication. Real-time metrics overlay and performance profiling tools.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Reduced bug investigation time by 60%</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Real-time performance metrics overlay</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl p-4 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="font-mono text-sm text-gray-400 mb-2">Debug Visualization</div>
+                                <div class="text-accent-blue font-mono">AI States | Physics | Network</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workflow Improvements -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-gray-900 rounded-xl border border-gray-800 p-6">
+                            <h3 class="text-xl font-mono font-bold text-white mb-4">Workflow Improvements</h3>
+                            <p class="text-gray-400 mb-4">
+                                Pipeline automation and team productivity tools. Includes automated build systems, 
+                                CI/CD integration, and quality assurance automation.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Automated daily build validation</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-terminal-green font-mono mr-2">></span>
+                                    <span class="text-gray-300">Reduced manual testing by 80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl p-4 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="font-mono text-sm text-gray-400 mb-2">Automation Impact</div>
+                                <div class="text-ebony-red font-mono">Manual tasks: -80%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20 bg-code-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-3xl md:text-4xl font-mono font-bold text-white mb-12">Projects</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <h3 class="text-xl font-mono font-bold text-white mb-2">Project Ares</h3>
+                        <div class="text-sm text-gray-400 mb-3">Lead Gameplay Programmer</div>
+                        <p class="text-gray-300 mb-4">
+                            Developed core combat systems including weapon handling, enemy AI behaviors, and player progression. 
+                            Implemented tools for combat balancing and analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Unreal Engine 5</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">AI</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-terminal-green font-mono text-sm hover:text-terminal-green/80">
+                            View Details
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <h3 class="text-xl font-mono font-bold text-white mb-2">Nexus Framework</h3>
+                        <div class="text-sm text-gray-400 mb-3">Tools Programmer</div>
+                        <p class="text-gray-300 mb-4">
+                            Created modular tooling framework for rapid prototyping. Includes visual scripting extensions, 
+                            asset pipeline automation, and performance profiling suite.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C#</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">.NET</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">WPF</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-terminal-green font-mono text-sm hover:text-terminal-green/80">
+                            View Details
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <h3 class="text-xl font-mono font-bold text-white mb-2">Character Controller Suite</h3>
+                        <div class="text-sm text-gray-400 mb-3">Systems Programmer</div>
+                        <p class="text-gray-300 mb-4">
+                            Advanced character controller with parkour mechanics, environmental interaction, and animation state machine. 
+                            Includes comprehensive debugging tools and performance optimization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Animation</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">Physics</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-terminal-green font-mono text-sm hover:text-terminal-green/80">
+                            View Details
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                        <h3 class="text-xl font-mono font-bold text-white mb-2">Debug Visualization System</h3>
+                        <div class="text-sm text-gray-400 mb-3">Tools & Infrastructure</div>
+                        <p class="text-gray-300 mb-4">
+                            Real-time debugging overlay for game systems visualization. Supports AI behavior, network replication, 
+                            physics interactions, and performance metrics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">DirectX 12</span>
+                            <span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">UI</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-terminal-green font-mono text-sm hover:text-terminal-green/80">
+                            View Details
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Art (Collapsible) -->
+        <section id="tech-art" class="py-20 bg-black">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center justify-between mb-8 cursor-pointer" id="tech-art-toggle">
+                        <h2 class="section-title text-3xl md:text-4xl font-mono font-bold text-white">Tech Art</h2>
+                        <span class="text-accent-blue font-mono text-sm" id="tech-art-toggle-text">[Show]</span>
+                    </div>
+                    
+                    <div id="tech-art-content" class="tech-art-content max-h-0">
+                        <div class="bg-gray-900 rounded-xl border border-gray-800 p-6">
+                            <p class="text-gray-300 mb-6">
+                                Technical art implementations focusing on shader development, procedural systems, 
+                                and performance optimization for real-time graphics.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <h3 class="text-lg font-mono font-bold text-white">Shader Development</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">Custom water and terrain shaders</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">Post-processing effects pipeline</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">Material instancing systems</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <h3 class="text-lg font-mono font-bold text-white">Procedural Systems</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">World generation algorithms</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">Procedural animation systems</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-terminal-green font-mono mr-2">></span>
+                                            <span class="text-gray-300">GPU-based particle systems</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-20 bg-code-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="section-title text-3xl md:text-4xl font-mono font-bold text-white mb-8">About</h2>
+                    
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 p-8">
+                        <p class="text-gray-300 mb-6">
+                            Specializing in gameplay systems and developer tooling with 8+ years of experience in AAA game development. 
+                            Focus on creating robust, performant systems that empower both players and development teams.
+                        </p>
+                        
+                        <p class="text-gray-300 mb-6">
+                            Core expertise includes character controllers, AI systems, animation programming, and tools development. 
+                            Passionate about improving development workflows through automation, visualization, and efficient tooling.
+                        </p>
+                        
+                        <p class="text-gray-300">
+                            Currently seeking opportunities to contribute to ambitious projects at studios pushing technical 
+                            and creative boundaries. Interested in systemic gameplay, emergent behavior, and tools that 
+                            accelerate iteration and improve quality.
+                        </p>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-800">
+                            <h3 class="text-lg font-mono font-bold text-white mb-4">Technical Focus Areas</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-deep-purple/20 text-accent-blue font-mono text-sm rounded-lg border border-deep-purple/30">Gameplay Systems</span>
+                                <span class="px-4 py-2 bg-deep-purple/20 text-accent-blue font-mono text-sm rounded-lg border border-deep-purple/30">Tools Development</span>
+                                <span class="px-4 py-2 bg-deep-purple/20 text-accent-blue font-mono text-sm rounded-lg border border-deep-purple/30">Performance Optimization</span>
+                                <span class="px-4 py-2 bg-deep-purple/20 text-accent-blue font-mono text-sm rounded-lg border border-deep-purple/30">Workflow Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-mono font-bold text-white mb-2">Alex Morgan</div>
+                    <div class="text-sm text-gray-400 font-mono">Gameplay & Tools Programmer</div>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:alex@example.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center">
+                <p class="text-gray-500 text-sm font-mono">© 2024 Alex Morgan. All rights reserved.</p>
+                <p class="text-gray-600 text-xs font-mono mt-2">Built for AAA game development studios</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener("click", () => {
+                navLinks.classList.toggle("hidden");
+            });
+        }
+
+        // Tech Art section toggle
+        const techArtToggle = document.getElementById("tech-art-toggle");
+        const techArtContent = document.getElementById("tech-art-content");
+        const techArtToggleText = document.getElementById("tech-art-toggle-text");
+        
+        if (techArtToggle && techArtContent && techArtToggleText) {
+            techArtToggle.addEventListener("click", () => {
+                const isExpanded = techArtContent.classList.contains("max-h-0");
+                if (isExpanded) {
+                    techArtContent.classList.remove("max-h-0");
+                    techArtContent.classList.add("max-h-screen");
+                    techArtToggleText.textContent = "[Hide]";
+                } else {
+                    techArtContent.classList.add("max-h-0");
+                    techArtContent.classList.remove("max-h-screen");
+                    techArtToggleText.textContent = "[Show]";
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href");
+                if (targetId === "#") return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!navLinks.classList.contains("hidden")) {
+                        navLinks.classList.add("hidden");
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Prevent default behavior for all anchor tags
+        document.querySelectorAll("a").forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                const href = this.getAttribute("href");
+                if (href && href.startsWith("#")) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Data definitions
+        const projects = [
+            {
+                "id": 1,
+                "title": "Project Ares",
+                "role": "Lead Gameplay Programmer",
+                "description": "Developed core combat systems including weapon handling, enemy AI behaviors, and player progression.",
+                "tags": ["C++", "Unreal Engine 5", "AI"],
+                "link": "#"
+            },
+            {
+                "id": 2,
+                "title": "Nexus Framework",
+                "role": "Tools Programmer",
+                "description": "Created modular tooling framework for rapid prototyping. Includes visual scripting extensions and asset pipeline automation.",
+                "tags": ["C#", ".NET", "WPF"],
+                "link": "#"
+            },
+            {
+                "id": 3,
+                "title": "Character Controller Suite",
+                "role": "Systems Programmer",
+                "description": "Advanced character controller with parkour mechanics, environmental interaction, and animation state machine.",
+                "tags": ["C++", "Animation", "Physics"],
+                "link": "#"
+            },
+            {
+                "id": 4,
+                "title": "Debug Visualization System",
+                "role": "Tools & Infrastructure",
+                "description": "Real-time debugging overlay for game systems visualization. Supports AI behavior, network replication, and physics interactions.",
+                "tags": ["C++", "DirectX 12", "UI"],
+                "link": "#"
+            }
+        ];
+
+        const gameplaySystems = [
+            {
+                "id": 1,
+                "title": "Movement System",
+                "description": "Advanced character locomotion with acceleration curves, slope handling, and momentum preservation.",
+                "tags": ["C++", "Unreal Engine", "Physics"],
+                "image": "https://picsum.photos/400/300?random=1"
+            },
+            {
+                "id": 2,
+                "title": "State Machines",
+                "description": "Hierarchical state machine implementation for character behavior with blend spaces and transition conditions.",
+                "tags": ["C++", "Blueprint", "Animation"],
+                "image": "https://picsum.photos/400/300?random=2"
+            },
+            {
+                "id": 3,
+                "title": "Input & Feel Tuning",
+                "description": "Responsive input system with deadzone customization, response curves, and platform-specific tuning.",
+                "tags": ["C++", "Input", "UI/UX"],
+                "image": "https://picsum.photos/400/300?random=3"
+            }
+        ];
+
+        // Function to generate project cards
+        function generateProjectCard(project) {
+            return `
+                <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                    <h3 class="text-xl font-mono font-bold text-white mb-2">${project.title}</h3>
+                    <div class="text-sm text-gray-400 mb-3">${project.role}</div>
+                    <p class="text-gray-300 mb-4">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${project.tags.map(tag => `<span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">${tag}</span>`).join("")}
+                    </div>
+                    <a href="${project.link}" class="inline-flex items-center text-terminal-green font-mono text-sm hover:text-terminal-green/80">
+                        View Details
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            `;
+        }
+
+        // Function to generate gameplay system cards
+        function generateGameplaySystemCard(system) {
+            return `
+                <div class="bg-gray-900 rounded-xl border border-gray-800 p-6 card-hover">
+                    <div class="mb-4">
+                        <div class="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                            <img src="${system.image}" alt="${system.title} visualization" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-mono font-bold text-white mb-2">${system.title}</h3>
+                        <p class="text-gray-400 text-sm mb-4">${system.description}</p>
+                        <div class="flex flex-wrap gap-2">
+                            ${system.tags.map(tag => `<span class="px-3 py-1 bg-deep-purple/30 text-accent-blue text-xs font-mono rounded-full">${tag}</span>`).join("")}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
