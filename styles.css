@@ -1,0 +1,129 @@
+/* =========================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* backup if JS fails */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black; /* fallback if image / blur fails */
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND (PARALLAX)
+   ========================================================= */
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url("Images/intro-bg.jpg"); /* update filename */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+/* Navigation Links */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+
+/* =========================================================
+   SECTIONS (GENERAL)
+   ========================================================= */
+
+.section {
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    /* top padding accounts for fixed header */
+}
+
+
+/* =========================================================
+   INTRO / HOME SECTION
+   ========================================================= */
+
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+
+    .intro h1 {
+        font-size: 4rem;
+        letter-spacing: 2px;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
