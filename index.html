@@ -2,23 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AniDrag | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
+    <title>AniDrag | Game Developer</title>
+
+    <!-- SEO -->
+    <meta name="description" content="AniDrag ï¿½ Unity game developer focused on gameplay systems, movement, shaders, and tools. Portfolio, games, and Unity asset packs.">
+    <meta name="keywords" content="AniDrag, Unity Developer, Game Developer, C#, Unity Tools, Indie Games">
+    <meta name="author" content="AniDrag">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AniDrag | Game Developer">
+    <meta property="og:description" content="Unity developer portfolio ï¿½ games, tools, and asset packs.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/preview.png">
+
+    <!-- Assets -->
+    <link rel="icon" href="Images/icon.png">
+        <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+        
 </head>
+
+
 <body>
 
     <!-- Background -->
     <div id="background"></div>
 
-    <!-- Content -->
-    <section class="intro">
-        <h1>AniDrag</h1>
-        <p>Game Dev • Unity • Systems Nerd</p>
+    <!-- Main header file to quickly move to any section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Images/icon.png" alt="AniDrag logo">
+                <span>AniDrag</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#unity-packs">Unity Packs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Intro section  -->
+    <section id="home" class="section intro">
+        <h1>Hello, Iï¿½m AniDrag</h1>
+        <p>Unity Game Developer ï¿½ Systems ï¿½ Tools</p>
+
+        <div class="links">
+            <a href="https://anidrag.itch.io" target="_blank">Itch.io</a>
+            <a href="https://github.com/AniDrag" target="_blank">GitHub</a>
+        </div>
+
+        <form class="contact-form">
+            <input type="email" placeholder="Your email" required>
+            <textarea placeholder="Your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
-    <section class="spacer"></section>
+    <!-- About me section  -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            Iï¿½m a Unity developer focused on gameplay systems, movement mechanics,
+            shaders, and scalable architecture. I enjoy building things that feel
+            good to play and easy to expand.
+        </p>
+    </section>
+
+    <!-- Skills, work Experiance and education level  -->
+    <section id="skills" class="section">
+        <h2>Experience</h2>
+
+        <div class="job">
+            <h3>Job Title</h3>
+            <p>Type | Start ï¿½ End | Hours</p>
+            <p>What you learned / worked on</p>
+        </div>
+
+        <h2>Education</h2>
+
+        <div class="education">
+            <h3>School / Course</h3>
+            <p>Start ï¿½ End</p>
+            <p>Overview of what you learned</p>
+        </div>
+
+        <h2>Skills</h2>
+        <ul class="skill-list">
+            <li>Unity (C#)</li>
+            <li>Gameplay Systems</li>
+            <li>Shaders (HLSL)</li>
+            <li>Git / GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Galery for everything i have, model, all ganes and such  -->
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+
+        <ul>
+            <li><a href="Gallery/models.html">My Models</a></li>
+            <li><a href="Gallery/sharkbite.html">SharkBite</a></li>
+        </ul>
+    </section>
+
+    <!-- Links to itch.io games  -->
+    <section id="games" class="section">
+        <h2>Games</h2>
+
+        <div class="game-card">
+            <img src="Images/game1.jpg">
+            <a href="https://anidrag.itch.io/game-name" target="_blank">
+                Play on Itch.io
+            </a>
+        </div>
+    </section>
+
+    <!-- My unity packs. can be a git repo or unity Asset store  -->
+    <section id="unity-packs" class="section">
+        <h2>Unity Packs</h2>
+
+        <ul>
+            <li>
+                <a href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
+                    Modular Movement System
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/AniDrag/PackRepo" target="_blank">
+                    Open-source Pack (WIP)
+                </a>
+            </li>
+        </ul>
+    </section>
 
     <!-- JS -->
     <script src="code.js"></script>
