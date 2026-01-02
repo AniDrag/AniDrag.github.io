@@ -1,129 +1,193 @@
 /* =========================================================
-   GLOBAL RESET & BASE STYLES
+   THEME VARIABLES (from second site)
    ========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --bg-main: #0a0a0a;
+    --bg-panel: #111;
+    --bg-card: #1a1a1a;
+    --bg-code: #1e1e1e;
+    --accent-purple: #2d1b69;
+    --accent-blue: #569cd6;
+    --terminal-green: #4ec9b0;
+    --border-soft: #2a2a2a;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
 }
-
-html {
-    scroll-behavior: smooth; /* backup if JS fails */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: black; /* fallback if image / blur fails */
-    overflow-x: hidden;
-}
-
 
 /* =========================================================
-   BACKGROUND (PARALLAX)
+   BASE FONT OVERRIDES
    ========================================================= */
 
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+h1, h2, h3, .mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================================
+   SECTION TITLES (vertical bar style)
+   ========================================================= */
+
+.section h2 {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+    .section h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient( to bottom, var(--accent-purple), var(--accent-blue) );
+    }
+
+/* =========================================================
+   CONTENT WRAPPER (alignment fix)
+   ========================================================= */
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+    .section > * {
+        width: 100%;
+        max-width: 1100px;
+    }
+
+/* =========================================================
+   CARD SYSTEM (shared across site)
+   ========================================================= */
+
+.card {
+    background: rgba(10, 25, 47, 0.6);
+    border: 1px solid #1f2937;
+    backdrop-filter: blur(6px);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(86, 156, 214, 0.2);
+    }
+
+/* =========================================================
+   GRID HELPERS
+   ========================================================= */
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* =========================================================
+   TAGS / TECH PILLS
+   ========================================================= */
+
+.tag {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--accent-blue);
+    background: rgba(45, 27, 105, 0.35);
+    border-radius: 999px;
+}
+
+/* =========================================================
+   BUTTONS (GitHub / Itch / CV)
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--accent-purple);
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+    .button.secondary {
+        background: #111;
+    }
+
+    .button:hover {
+        background: #3b2494;
+        transform: translateY(-2px);
+    }
+
+/* =========================================================
+   INTRO REFINEMENT
+   ========================================================= */
+
+.intro h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.intro p {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--terminal-green);
+}
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    gap: 1rem;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-soft);
+        color: white;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .contact-form button {
+        background: var(--accent-purple);
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-family: "JetBrains Mono", monospace;
+        color: white;
+        cursor: pointer;
+    }
 #background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    background-image: url("Images/intro-bg.jpg"); /* update filename */
+    inset: 0;
+    background-image: url("Images/intro-bg.jpg");
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
-
-
-/* =========================================================
-   HEADER & NAVIGATION
-   ========================================================= */
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Logo */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: bold;
-}
-
-    .logo img {
-        width: 32px;
-        height: 32px;
-    }
-
-/* Navigation Links */
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        opacity: 0.8;
-        transition: opacity 0.2s ease;
-    }
-
-        .nav-links a:hover {
-            opacity: 1;
-        }
-
-
-/* =========================================================
-   SECTIONS (GENERAL)
-   ========================================================= */
-
-.section {
-    min-height: 100vh;
-    padding: 100px 2rem 2rem;
-    /* top padding accounts for fixed header */
-}
-
-
-/* =========================================================
-   INTRO / HOME SECTION
-   ========================================================= */
-
-.intro {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    backdrop-filter: blur(2px);
-}
-
-    .intro h1 {
-        font-size: 4rem;
-        letter-spacing: 2px;
-    }
-
-    .intro p {
-        font-size: 1.2rem;
-        opacity: 0.8;
-    }

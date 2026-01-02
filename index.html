@@ -7,140 +7,191 @@
     <title>AniDrag | Game Developer</title>
 
     <!-- SEO -->
-    <meta name="description" content="AniDrag � Unity game developer focused on gameplay systems, movement, shaders, and tools. Portfolio, games, and Unity asset packs.">
+    <meta name="description" content="AniDrag – Unity game developer focused on gameplay systems, movement, shaders, and tools.">
     <meta name="keywords" content="AniDrag, Unity Developer, Game Developer, C#, Unity Tools, Indie Games">
     <meta name="author" content="AniDrag">
 
     <!-- Open Graph -->
     <meta property="og:title" content="AniDrag | Game Developer">
-    <meta property="og:description" content="Unity developer portfolio � games, tools, and asset packs.">
+    <meta property="og:description" content="Unity developer portfolio – games, tools, and asset packs.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Images/preview.png">
 
     <!-- Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/icon.png">
-        <!-- CSS -->
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "ebony-blue": "#0a192f",
+                        "accent-blue": "#569cd6"
+                    },
+                    fontFamily: {
+                        mono: ["JetBrains Mono", "monospace"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-        
 </head>
 
-
-<body>
+<body class="bg-black text-white font-sans">
 
     <!-- Background -->
     <div id="background"></div>
 
-    <!-- Main header file to quickly move to any section -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="Images/icon.png" alt="AniDrag logo">
-                <span>AniDrag</span>
-            </div>
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-ebony-blue/95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="#home" class="text-2xl font-mono font-bold hover:text-accent-blue transition">
+                        AniDrag
+                    </a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#unity-packs">Unity Packs</a></li>
-            </ul>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                        ☰
+                    </button>
+                </div>
+
+                <div id="nav-links" class="hidden md:flex space-x-8 mt-4 md:mt-0 font-mono text-sm">
+                    <a href="#home" class="hover:text-accent-blue">Home</a>
+                    <a href="#about" class="hover:text-accent-blue">About</a>
+                    <a href="#skills" class="hover:text-accent-blue">Skills</a>
+                    <a href="#gallery" class="hover:text-accent-blue">Gallery</a>
+                    <a href="#games" class="hover:text-accent-blue">Games</a>
+                    <a href="#unity-packs" class="hover:text-accent-blue">Unity Packs</a>
+                </div>
+            </div>
         </nav>
     </header>
-    <!-- Intro section  -->
-    <section id="home" class="section intro">
-        <h1>Hello, I�m AniDrag</h1>
-        <p>Unity Game Developer � Systems � Tools</p>
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-32">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-mono font-bold mb-4">
+                Greeting, vistor welcome to my portfolio!
+            </h1>
 
-        <div class="links">
-            <a href="https://anidrag.itch.io" target="_blank">Itch.io</a>
-            <a href="https://github.com/AniDrag" target="_blank">GitHub</a>
+            <p class="text-gray-400 font-mono mb-8">
+                Unity Game Developer • Systems • Tools
+            </p>
+
+            <div class="flex justify-center gap-4">
+                <a href="https://anidrag.itch.io" target="_blank"
+                   class="px-6 py-2 border border-gray-700 rounded hover:border-accent-blue hover:text-accent-blue transition">
+                    Itch.io
+                </a>
+                <a href="https://github.com/AniDrag" target="_blank"
+                   class="px-6 py-2 border border-gray-700 rounded hover:border-accent-blue hover:text-accent-blue transition">
+                    GitHub
+                </a>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <form class="contact-form card">
+                    <p class="text-gray-400 font-mono mb-8">
+                        Contact
+                    </p>
+                    <input type="email" placeholder="Your email" required>
+                    <textarea placeholder="Your message"></textarea>
+                    <button type="submit" class="btn primary">Send</button>
+                    <!-- Add so it sends this to xxsoullessxxaye@gmail.com -->
+                </form>
+            </div>
         </div>
-
-        <form class="contact-form">
-            <input type="email" placeholder="Your email" required>
-            <textarea placeholder="Your message"></textarea>
-            <button type="submit">Send</button>
-        </form>
     </section>
-
-    <!-- About me section  -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I�m a Unity developer focused on gameplay systems, movement mechanics,
-            shaders, and scalable architecture. I enjoy building things that feel
-            good to play and easy to expand.
+    <!-- ABOUT -->
+    <section id="about" class="max-w-4xl mx-auto px-4 py-32">
+        <h2 class="text-3xl font-mono font-semibold mb-6">About Me</h2>
+        <p class="text-gray-400 leading-relaxed">
+            Gameplay and tool focused engineering student with hands on experience
+            developing player systems, movement mechanics, and editor tooling in Unity engine.
+            Strongly habit of writing clean, optimized, and extensible code that
+            improves both player experience and developer workflows.
+            Experience in rapid iteration and system driven design, with long term goal
+            of specializing in gameplay and tool development withing AAA engine environment.
         </p>
     </section>
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 py-32">
+        <h2 class="text-3xl font-mono font-semibold mb-10">Skills</h2>
 
-    <!-- Skills, work Experiance and education level  -->
-    <section id="skills" class="section">
-        <h2>Experience</h2>
-
-        <div class="job">
-            <h3>Job Title</h3>
-            <p>Type | Start � End | Hours</p>
-            <p>What you learned / worked on</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
+            <div class="card">Unity (C#)</div>
+            <div class="card">Bare bones (C++)</div>
+            <div class="card">Gameplay Systems</div>
+            <div class="card">Shaders (HLSL)</div>
+            <div class="card">Git / GitHub</div>
+            <div class="card">Version controll / GitFork</div>
         </div>
-
-        <h2>Education</h2>
-
-        <div class="education">
-            <h3>School / Course</h3>
-            <p>Start � End</p>
-            <p>Overview of what you learned</p>
-        </div>
-
-        <h2>Skills</h2>
-        <ul class="skill-list">
-            <li>Unity (C#)</li>
-            <li>Gameplay Systems</li>
-            <li>Shaders (HLSL)</li>
-            <li>Git / GitHub</li>
-        </ul>
     </section>
 
-    <!-- Galery for everything i have, model, all ganes and such  -->
+    <!-- GALLERY -->
     <section id="gallery" class="section">
-        <h2>Gallery</h2>
+        <div class="section-inner">
+            <h2 class="section-title">Gallery</h2>
 
-        <ul>
-            <li><a href="Gallery/models.html">My Models</a></li>
-            <li><a href="Gallery/sharkbite.html">SharkBite</a></li>
-        </ul>
-    </section>
+            <div class="card-grid">
+                <a class="card link-card" href="Gallery/models.html">
+                    <h3>3D Models</h3>
+                    <p>Personal modeling work</p>
+                </a>
 
-    <!-- Links to itch.io games  -->
-    <section id="games" class="section">
-        <h2>Games</h2>
-
-        <div class="game-card">
-            <img src="Images/game1.jpg">
-            <a href="https://anidrag.itch.io/game-name" target="_blank">
-                Play on Itch.io
-            </a>
+                <a class="card link-card" href="Gallery/sharkbite.html">
+                    <h3>SharkBite</h3>
+                    <p>Game project showcase</p>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- My unity packs. can be a git repo or unity Asset store  -->
+    <!-- GAMES -->
+    <section id="games" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">Games</h2>
+
+            <div class="card-grid">
+                <div class="card game-card">
+                    <img src="Images/game1.jpg" alt="Game preview">
+                    <div class="card-content">
+                        <h3>Game Name</h3>
+                        <a class="btn link-btn" href="https://anidrag.itch.io/game-name" target="_blank">
+                            Play on Itch.io
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNITY PACKS -->
     <section id="unity-packs" class="section">
-        <h2>Unity Packs</h2>
+        <div class="section-inner">
+            <h2 class="section-title">Unity Packs</h2>
 
-        <ul>
-            <li>
-                <a href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
-                    Modular Movement System
+            <div class="card-list">
+                <a class="card link-card" href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
+                    <h3>Modular Movement System</h3>
+                    <p>Unity Asset Store</p>
                 </a>
-            </li>
 
-            <li>
-                <a href="https://github.com/AniDrag/PackRepo" target="_blank">
-                    Open-source Pack (WIP)
+                <a class="card link-card" href="https://github.com/AniDrag/PackRepo" target="_blank">
+                    <h3>Open-source Pack (WIP)</h3>
+                    <p>GitHub repository</p>
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </section>
 
     <!-- JS -->
