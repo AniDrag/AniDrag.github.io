@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AniDrag | Game Developer</title>
+    <title>Dungeon Crawler</title>
 
     <!-- SEO -->
-    <meta name="description" content="AniDrag – Unity game developer focused on gameplay systems, movement, shaders, and tools.">
+    <meta name="description" content="AniDrag – Unity game, School Project of a Dungeon crawler type.">
     <meta name="keywords" content="AniDrag, Unity Developer, Game Developer, C#, Unity Tools, Indie Games">
     <meta name="author" content="AniDrag">
 
     <!-- Open Graph -->
     <meta property="og:title" content="AniDrag | Game Developer">
-    <meta property="og:description" content="Unity developer portfolio – games, tools, and asset packs.">
+    <meta property="og:description" content="Unity developer portfolio – games, tools">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Images/preview.png">
 
@@ -56,7 +56,7 @@
         <nav class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div class="flex items-center justify-between">
-                    <a href="#home" class="text-2xl font-mono font-bold hover:text-accent-blue transition">
+                    <a href="index.html#home" class="text-2xl font-mono font-bold hover:text-accent-blue transition">
                         AniDrag
                     </a>
 
@@ -70,8 +70,6 @@
                     <a href="#about" class="hover:text-accent-blue">About</a>
                     <a href="#skills" class="hover:text-accent-blue">Skills</a>
                     <a href="#gallery" class="hover:text-accent-blue">Gallery</a>
-                    <a href="#games" class="hover:text-accent-blue">Games</a>
-                    <a href="#unity-packs" class="hover:text-accent-blue">Unity Packs</a>
                 </div>
             </div>
         </nav>
@@ -80,7 +78,7 @@
     <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-32">
         <div>
             <h1 class="text-5xl md:text-6xl font-mono font-bold mb-4">
-                Greetings, visitor — welcome to my portfolio!
+                Greeting, vistor welcome to my portfolio!
             </h1>
 
             <p class="text-gray-400 font-mono mb-8">
@@ -96,18 +94,6 @@
                    class="px-6 py-2 border border-gray-700 rounded hover:border-accent-blue hover:text-accent-blue transition">
                     GitHub
                 </a>
-            </div>
-
-            <div class="flex justify-center gap-4">
-                <form class="contact-form card">
-                    <p class="text-gray-400 font-mono mb-8">
-                        Contact
-                    </p>
-                    <input type="email" placeholder="Your email" required>
-                    <textarea placeholder="Your message"></textarea>
-                    <button type="submit" class="btn primary">Send</button>
-                    <!-- Add so it sends this to xxsoullessxxaye@gmail.com -->
-                </form>
             </div>
         </div>
     </section>
@@ -134,111 +120,6 @@
             <div class="card">Shaders (HLSL)</div>
             <div class="card">Git / GitHub</div>
             <div class="card">Version controll / GitFork</div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="max-w-6xl mx-auto px-4 py-32">
-        <h2 class="text-3xl font-mono font-semibold mb-10">Projects</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
-            <a href="BeeSwarmSim.html"
-               target="_blank"
-               rel="noopener"
-               class="card">
-
-                <h3 class="text-xl font-mono mb-2">
-                    Bee Swarm Simulator
-                </h3>
-
-                <p class="text-gray-400">
-                    Unity simulation focused on swarm behavior and performance.
-                </p>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
-            <a href="Dungeon Crawler.html"
-               target="_blank"
-               rel="noopener"
-               class="card">
-
-                <h3 class="text-xl font-mono mb-2">
-                    Dungeon Crawler
-                </h3>
-
-                <p class="text-gray-400">
-                    Unity simulation focused on swarm behavior and performance.
-                </p>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
-            <a href="SharkBite.html"
-               target="_blank"
-               rel="noopener"
-               class="card">
-
-                <h3 class="text-xl font-mono mb-2">
-                    Shark Bite
-                </h3>
-
-                <p class="text-gray-400">
-                    Unity simulation focused on swarm behavior and performance.
-                </p>
-            </a>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="max-w-6xl mx-auto px-4 py-32">
-        <h2 class="text-3xl font-mono font-semibold mb-6">Gallery</h2>
-
-        <div class="flex gap-3 mb-6 flex-wrap font-mono text-sm">
-            <button class="filter-btn" data-filter="All">All</button>
-            <button class="filter-btn" data-filter="BeeSwarmSim">Bee Swarm</button>
-            <button class="filter-btn" data-filter="SharkBite">Shark Bite</button>
-            <button class="filter-btn" data-filter="DungeonCrawler">Dungeon</button>
-        </div>
-
-        <div id="gallery-grid" class="card-grid"></div>
-    </section>
-
-    <!-- GAMES -->
-    <section id="games" class="section">
-        <div class="section-inner">
-            <h2 class="section-title">Games</h2>
-
-            <div class="card-grid">
-                <div class="card game-card">
-                    <img src="Images/game1.jpg" alt="Game preview">
-                    <div class="card-content">
-                        <h3>Game Name</h3>
-                        <a class="btn link-btn" href="https://anidrag.itch.io/game-name" target="_blank">
-                            Play on Itch.io
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- UNITY PACKS -->
-    <section id="unity-packs" class="section">
-        <div class="section-inner">
-            <h2 class="section-title">Unity Packs</h2>
-
-            <div class="card-list">
-                <a class="card link-card" href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
-                    <h3>Modular Movement System</h3>
-                    <p>Unity Asset Store</p>
-                </a>
-
-                <a class="card link-card" href="https://github.com/AniDrag/PackRepo" target="_blank">
-                    <h3>Open-source Pack (WIP)</h3>
-                    <p>GitHub repository</p>
-                </a>
-            </div>
         </div>
     </section>
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bee Swarm simulator</title>
+
+    <!-- SEO -->
+    <meta name="description" content="AniDrag – Unity game developer focused on gameplay systems, movement, shaders, and tools.">
+    <meta name="keywords" content="AniDrag, Unity Developer, Game Developer, C#, Unity Tools, Indie Games">
+    <meta name="author" content="AniDrag">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AniDrag | Game Developer">
+    <meta property="og:description" content="Unity developer portfolio – games, tools, and asset packs.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/preview.png">
+
+    <!-- Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/icon.png">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "ebony-blue": "#0a192f",
+                        "accent-blue": "#569cd6"
+                    },
+                    fontFamily: {
+                        mono: ["JetBrains Mono", "monospace"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white font-sans">
+
+    <!-- Background -->
+    <div id="background"></div>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-ebony-blue/95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="index.html#home" class="text-2xl font-mono font-bold hover:text-accent-blue transition">
+                        AniDrag
+                    </a>
+
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                        ☰
+                    </button>
+                </div>
+
+                <div id="nav-links" class="hidden md:flex space-x-8 mt-4 md:mt-0 font-mono text-sm">
+                    <a href="#home" class="hover:text-accent-blue">Home</a>
+                    <a href="#about" class="hover:text-accent-blue">About</a>
+                    <a href="#skills" class="hover:text-accent-blue">Skills</a>
+                    <a href="#gallery" class="hover:text-accent-blue">Gallery</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-32">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-mono font-bold mb-4">
+                Bee Swarm simulator
+            </h1>
+
+            <p class="text-gray-400 font-mono mb-8">
+                Multiplayer | Unity | C# - Colection | Exploration | Quests | Upgrades | Minigames
+            </p>
+
+            <div class="flex justify-center gap-4">
+                <a href="https://anidrag.itch.io" target="_blank"
+                   class="px-6 py-2 border border-gray-700 rounded hover:border-accent-blue hover:text-accent-blue transition">
+                    Itch project page
+                </a>
+                <a href="https://github.com/AniDrag/3_GroupProject_BeeConquest.git" target="_blank"
+                   class="px-6 py-2 border border-gray-700 rounded hover:border-accent-blue hover:text-accent-blue transition">
+                    GitHub project repo
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="max-w-4xl mx-auto px-4 py-32">
+        <h2 class="text-3xl font-mono font-semibold mb-6">Project discription</h2>
+        <p class="text-gray-400 leading-relaxed">
+            This was my 3. group project at university, where we created a multiplayer bee swarm simulator game in Unity. 
+            The game focuses on collecting pollin, quest completion, and upgrading your bee swarm as you progress through the game world. 
+            Players can collect resources, complete various quests, and engage in mini-games to enhance their gameplay experience. 
+            My primary role in this project was to develop core gameplay systems, Bee statemachine, new bee creation tooling, Shop system, Bee types and skill framework. 
+            This project allowed me to apply my skills in C# programming and Unity development while collaborating effectively with my team members.
+        </p>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 py-32">
+        <h2 class="text-3xl font-mono font-semibold mb-10">Skills</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
+            <div class="card">Unity (C#)</div>
+            <div class="card">Gameplay Systems</div>
+            <div class="card">Version controll / GitFork</div>
+            <div class="card">Tooling - Unity / GitFork</div>
+        </div>
+    </section>
+
+    
+    <!-- JS -->
+    <script src="code.js"></script>
+</body>
+</html>

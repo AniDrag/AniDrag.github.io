@@ -15,59 +15,22 @@
     --text-muted: #9ca3af;
 }
 
-/* =========================================================
-   BASE FONT OVERRIDES
-   ========================================================= */
-
-body {
-    font-family: "Inter", sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
+#background {
+    position: fixed;
+    inset: 0;
+    background-image: url("Images/intro-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
-
-h1, h2, h3, .mono {
-    font-family: "JetBrains Mono", monospace;
-}
-
-/* =========================================================
-   SECTION TITLES (vertical bar style)
-   ========================================================= */
-
-.section h2 {
-    position: relative;
-    padding-left: 1rem;
-    margin-bottom: 3rem;
-}
-
-    .section h2::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 4px;
-        height: 100%;
-        background: linear-gradient( to bottom, var(--accent-purple), var(--accent-blue) );
-    }
-
-/* =========================================================
-   CONTENT WRAPPER (alignment fix)
-   ========================================================= */
-
-.section {
-    display: flex;
-    justify-content: center;
-}
-
-    .section > * {
-        width: 100%;
-        max-width: 1100px;
-    }
 
 /* =========================================================
    CARD SYSTEM (shared across site)
    ========================================================= */
 
 .card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     background: rgba(10, 25, 47, 0.6);
     border: 1px solid #1f2937;
     backdrop-filter: blur(6px);
@@ -80,76 +43,10 @@ h1, h2, h3, .mono {
         box-shadow: 0 12px 30px rgba(86, 156, 214, 0.2);
     }
 
-/* =========================================================
-   GRID HELPERS
-   ========================================================= */
-
-.grid {
+.card-grid {
     display: grid;
-    gap: 2rem;
-}
-
-.grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-/* =========================================================
-   TAGS / TECH PILLS
-   ========================================================= */
-
-.tag {
-    display: inline-block;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.75rem;
-    font-family: "JetBrains Mono", monospace;
-    color: var(--accent-blue);
-    background: rgba(45, 27, 105, 0.35);
-    border-radius: 999px;
-}
-
-/* =========================================================
-   BUTTONS (GitHub / Itch / CV)
-   ========================================================= */
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    border: 1px solid var(--border-soft);
-    background: var(--accent-purple);
-    color: white;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-    .button.secondary {
-        background: #111;
-    }
-
-    .button:hover {
-        background: #3b2494;
-        transform: translateY(-2px);
-    }
-
-/* =========================================================
-   INTRO REFINEMENT
-   ========================================================= */
-
-.intro h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-}
-
-.intro p {
-    font-family: "JetBrains Mono", monospace;
-    color: var(--terminal-green);
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 /* =========================================================
@@ -183,11 +80,19 @@ h1, h2, h3, .mono {
         color: white;
         cursor: pointer;
     }
-#background {
-    position: fixed;
-    inset: 0;
-    background-image: url("Images/intro-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+
+/* =========================================================
+   FILTER BUTTONS
+   ========================================================= */
+
+.filter-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #374151;
+    border-radius: 999px;
+    font-family: "JetBrains Mono", monospace;
 }
+
+    .filter-btn.active {
+        border-color: var(--accent-blue);
+        color: var(--accent-blue);
+    }
