@@ -1,24 +1,35 @@
 {
-  "gallery":[
+  "gallery": [
     {
-      "src": "Images/Gallery/dungeon1.jpg",
-      "title": "Dungeon Crawler � Combat",
+      "src": ".Images/BS_1.jpg",
+      "title": "Dungeon Crawler – Combat",
+      "projects": [ "All", "BeeSwarmSim" ]
+    },
+    {
+      "src": ".Images/BS_2.jpg",
+      "title": "Dungeon Crawler – Level Gen",
+      "projects": [ "All", "BeeSwarmSim" ]
+    },
+    {
+      "src": ".Images/DC_1.png",
+      "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "DungeonCrawler" ]
     },
     {
-      "src": "Images/Gallery/dungeon2.jpg",
-      "title": "Dungeon Crawler � Level Gen",
+      "src": ".Images/DC_2.jpg",
+      "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "DungeonCrawler" ]
     },
     {
-      "src": "Images/Gallery/shark1.jpg",
-      "title": "Shark Bite � AI Test",
+      "src": ".Images/SB_1.jpg",
+      "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "SharkBite" ]
     },
     {
-      "src": "Images/Gallery/tool1.jpg",
-      "title": "Editor Tool",
-      "projects": [ "All", "Tools" ]
+      "src": ".Images/SB_2.jpg",
+      "title": "Dungeon Crawler – Level Gen",
+      "projects": [ "All", "SharkBite" ]
     }
+
   ]
 }
