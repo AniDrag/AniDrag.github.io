@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    THEME VARIABLES (from second site)
    ========================================================= */
 
@@ -48,6 +48,24 @@
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
+
+.skillCard {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(10, 25, 47, 0.6);
+    border: 1px solid #1f2937;
+    backdrop-filter: blur(6px);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    /* no cursor property here */
+}
+
+    .skillCard:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(86, 156, 214, 0.2);
+        /* no cursor change → stays default */
+    }
+
+
 
 /* =========================================================
    CONTACT FORM

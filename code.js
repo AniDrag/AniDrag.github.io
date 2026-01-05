@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let galleryData = [];
     let currentFilter = "All";
 
-    fetch("Images/gallery.json")
+    fetch(".Images/gallery.json")
         .then(res => {
             if (!res.ok) throw new Error("Gallery JSON not found");
             return res.json();
