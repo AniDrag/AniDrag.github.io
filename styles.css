@@ -76,7 +76,11 @@
 
 .projectCard{
     cursor: pointer;
-
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent-purple);
+    backdrop-filter: blur(6px);
+    padding: 1.9rem;
+    border-radius: 0.75rem;
 }
 
 .card {
