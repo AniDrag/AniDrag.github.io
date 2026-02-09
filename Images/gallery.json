@@ -16,17 +16,17 @@
       "projects": [ "All", "DungeonCrawler" ]
     },
     {
-      "src": "./DC_2.jpg",
+      "src": "./Images/DC_2.jpg",
       "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "DungeonCrawler" ]
     },
     {
-      "src": "./SB_1.jpg",
+      "src": "./Images/SB_1.jpg",
       "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "SharkBite" ]
     },
     {
-      "src": "./SB_2.jpg",
+      "src": "./Images/SB_2.jpg",
       "title": "Dungeon Crawler – Level Gen",
       "projects": [ "All", "SharkBite" ]
     }
