@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const background = document.getElementById("background");
-
-    if (background) {
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            background.style.transform = `translateY(${scrollY * -0.1}px)`;
-        });
-    }
+   
+  // if (background) {
+  //     window.addEventListener("scroll", () => {
+  //         const scrollY = window.scrollY;
+  //         background.style.transform = `translateY(${scrollY * -0.1}px)`;
+  //     });
+    // }
+  // if (background) {
+  //     window.addEventListener("scroll", () => {
+  //         const scrollY = window.scrollY;
+  //         // Very subtle movement for tiled background
+  //         background.style.transform = `translateY(${scrollY * -0.03}px)`;
+  //     });
+  // }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

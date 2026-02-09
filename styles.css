@@ -1,10 +1,45 @@
 ﻿/* =========================================================
+   HOW TO MAKE THINGS
+   ========================================================= */
+   /* 
+   When making something determine what it is.
+
+1.
+   # + name -> in html it is shown as id = name.
+        Example:
+            <a id = "name"> whatever is here </a> 
+    Everything in #name {} will be used for this <a>.
+
+2.
+    .name -> in html is a class = "name".
+    Same usage as above just use class = "name" at the end.
+
+3.
+    You can combine class and id together.
+    Example:
+        <a id = "name" class = "name"> text or whatever </a>
+
+4. 
+    Calling individual already existing classes or attributes in the HTML is just simply calling the type.
+    Example: 
+        div{
+            all divs will have this code and behavior.
+        }
+        or 
+        body{
+            code here,
+        }
+   */
+
+
+
+/* =========================================================
    THEME VARIABLES (from second site)
    ========================================================= */
 
 :root {
     --bg-main: #0a0a0a;
-    --bg-panel: #111;
+    --bg-panel: #0c051f;
     --bg-card: #1a1a1a;
     --bg-code: #1e1e1e;
     --accent-purple: #2d1b69;
@@ -17,18 +52,32 @@
 
 #background {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 8000%;
+    height: 300%;
     background-image: url("Images/intro-bg.jpg");
-    background-size: cover;
-    background-position: center;
     background-repeat: repeat;
-    background-size: 20vw 20vw; 
+    background-size: auto;
     z-index: -1;
+    animation: parallaxScroll linear forwards;
+    animation-timeline: scroll(root);
+}
+
+@keyframes parallaxScroll {
+    to {
+        transform: translateY(calc(-200% + 100vh));
+    }
 }
 
 /* =========================================================
    CARD SYSTEM (shared across site)
    ========================================================= */
+
+.projectCard{
+    cursor: pointer;
+
+}
 
 .card {
     cursor: pointer;
