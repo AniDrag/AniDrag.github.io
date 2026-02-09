@@ -54,14 +54,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 8000%;
-    height: 300%;
+    width: 200%;
+    height: 200%;
     background-image: url("Images/intro-bg.jpg");
     background-repeat: repeat;
     background-size: auto;
     z-index: -1;
-    animation: parallaxScroll linear forwards;
-    animation-timeline: scroll(root);
 }
 
 @keyframes parallaxScroll {
@@ -76,12 +74,22 @@
 
 .projectCard{
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(6px);
+
     background-color: var(--bg-card);
     border: 2px solid var(--accent-purple);
     backdrop-filter: blur(6px);
     padding: 1.9rem;
     border-radius: 0.75rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+    .projectCard:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(86, 156, 214, 0.2);
+
+    }
 
 .card {
     cursor: pointer;
@@ -115,9 +123,7 @@
 }
 
     .skillCard:hover {
-        transform: translateY(-6px);
         box-shadow: 0 12px 30px rgba(86, 156, 214, 0.2);
-        /* no cursor change → stays default */
     }
 
 
@@ -155,17 +161,154 @@
     }
 
 /* =========================================================
-   FILTER BUTTONS
+   GALLERY STYLES
    ========================================================= */
 
-.filter-btn {
-    padding: 0.4rem 0.8rem;
-    border: 1px solid #374151;
-    border-radius: 999px;
+#gallery {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 2rem 1rem;
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-soft);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-height: 1200px; /* Limit to approximately 3 rows */
+    overflow-y: auto;
+    padding: 1rem;
+    padding-right: 0.5rem;
+}
+
+/* Custom scrollbar for gallery */
+#gallery-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+#gallery-grid::-webkit-scrollbar-track {
+    background: var(--bg-card);
+    border-radius: 4px;
+}
+
+#gallery-grid::-webkit-scrollbar-thumb {
+    background: var(--accent-purple);
+    border-radius: 4px;
+}
+
+#gallery-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Gallery card specific styling */
+#gallery-grid .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#gallery-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(45, 27, 105, 0.3);
+    border-color: var(--accent-purple);
+}
+
+#gallery-grid .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#gallery-grid .card h3 {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+#gallery-grid .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-soft);
+}
+
+#gallery-grid .card .tag {
+    background: var(--accent-purple);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.7rem;
     font-family: "JetBrains Mono", monospace;
 }
 
-    .filter-btn.active {
-        border-color: var(--accent-blue);
-        color: var(--accent-blue);
-    }
+/* Filter buttons styling */
+#filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-soft);
+}
+
+.filter-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    background: var(--bg-panel);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.filter-btn.active {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    background: rgba(86, 156, 214, 0.1);
+}
+
+/* Gallery section title */
+#gallery h2 {
+    color: var(--text-main);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* Empty state */
+#gallery-grid:empty::before {
+    content: "No images found with this filter.";
+    color: var(--text-muted);
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    padding: 3rem;
+    grid-column: 1 / -1;
+}

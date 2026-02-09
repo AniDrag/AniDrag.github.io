@@ -2,121 +2,170 @@
   "gallery": [
     {
       "src": "./Images/BS_1.jpg",
-      "title": "Dungeon Crawler – Combat",
-      "projects": [ "All", "BeeSwarmSim" ]
+      "title": "Bee Swarm Character Design",
+      "projects": [ "All", "BeeSwarmSim", "3D Models", "Character Design" ],
+      "year": 2022,
+      "description": "Temp"
     },
     {
       "src": "./Images/BS_2.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "BeeSwarmSim" ]
+      "title": "Bee Swarm Environment",
+      "projects": [ "All", "BeeSwarmSim", "3D Models", "Environment Art" ],
+      "year": 2022,
+      "description": "Temp."
     },
     {
       "src": "./Images/DC_1.png",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "DungeonCrawler" ]
+      "title": "Dungeon Crawler Level Layout",
+      "projects": [ "All", "DungeonCrawler", "3D Models", "Level Design" ],
+      "year": 2021,
+      "description": "Temp."
     },
     {
       "src": "./Images/DC_2.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "DungeonCrawler" ]
+      "title": "Dungeon Crawler Combat Scene",
+      "projects": [ "All", "DungeonCrawler", "3D Models", "Game Dev" ],
+      "year": 2021,
+      "description": "Temp"
     },
     {
       "src": "./Images/SB_1.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "SharkBite" ]
+      "title": "Shark Bite Underwater Scene",
+      "projects": [ "All", "SharkBite", "3D Models", "Environment Art" ],
+      "year": 2023,
+      "description": "Temp"
     },
     {
       "src": "./Images/SB_2.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "SharkBite" ]
+      "title": "Shark Bite Character Models",
+      "projects": [ "All", "SharkBite", "3D Models", "Character Design" ],
+      "year": 2023,
+      "description": "Temp"
     },
+
+
+
 
 
 
     {
       "src": "./Images/MyArt_1.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Character Design",
+      "projects": [ "All", "My Art", "Digital Art", "Character Design" ],
+      "year": 2018,
+      "description": "Initial character concept and design."
     },
     {
       "src": "./Images/MyArt_2.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Digital Portrait",
+      "projects": [ "All", "My Art", "Digital Art", "Portrait" ],
+      "year": 2017,
+      "description": "Digital portrait study focusing on lighting."
     },
     {
       "src": "./Images/MyArt_3.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Abstract Composition",
+      "projects": [ "All", "My Art", "Digital Art", "Abstract" ],
+      "year": 2018,
+      "description": "Experimental abstract digital painting."
     },
     {
       "src": "./Images/MyArt_4.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Fantasy Landscape",
+      "projects": [ "All", "My Art", "Digital Art", "Landscape" ],
+      "year": 2018,
+      "description": "Fantasy landscape with magical elements."
     },
     {
       "src": "./Images/MyArt_5.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Sci-Fi Environment",
+      "projects": [ "All", "My Art", "Digital Art", "Sci-Fi", "Environment Art" ],
+      "year": 2019,
+      "description": "Futuristic city environment concept."
     },
     {
       "src": "./Images/MyArt_6.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Creature Concept",
+      "projects": [ "All", "My Art", "Digital Art", "Creature Design" ],
+      "year": 2019,
+      "description": "Fantasy creature concept design."
     },
     {
       "src": "./Images/MyArt_7.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Urban Sketch",
+      "projects": [ "All", "My Art", "Traditional Art", "Urban", "Sketch" ],
+      "year": 2020,
+      "description": "Urban environment sketch with ink and wash."
     },
     {
       "src": "./Images/MyArt_8.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Color Study",
+      "projects": [ "All", "My Art", "Digital Art", "Study", "Color Theory" ],
+      "year": 2020,
+      "description": "Color theory and lighting study."
     },
     {
       "src": "./Images/MyArt_9.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Character Turnaround",
+      "projects": [ "All", "My Art", "Digital Art", "Character Design", "Turnaround" ],
+      "year": 2020,
+      "description": "Character turnaround sheet for 3D modeling reference."
     },
     {
       "src": "./Images/MyArt_10.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Props Design",
+      "projects": [ "All", "My Art", "Digital Art", "Props", "Game Dev" ],
+      "year": 2022,
+      "description": "Game props and item design concepts."
     },
     {
       "src": "./Images/MyArt_11.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Monster Design",
+      "projects": [ "All", "My Art", "Digital Art", "Monster", "Creature Design" ],
+      "year": 2021,
+      "description": "Monster creature design for game enemy."
     },
     {
       "src": "./Images/MyArt_12.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Vehicle Concept",
+      "projects": [ "All", "My Art", "Digital Art", "Vehicle", "Hard Surface" ],
+      "year": 2021,
+      "description": "Sci-fi vehicle design concept."
     },
     {
       "src": "./Images/MyArt_13.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Architecture Study",
+      "projects": [ "All", "My Art", "Digital Art", "Architecture", "Environment Art" ],
+      "year": 2022,
+      "description": "Architectural design and perspective study."
     },
     {
       "src": "./Images/MyArt_14.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Comic Art",
+      "projects": [ "All", "My Art", "Digital Art", "Comic", "Illustration" ],
+      "year": 2022,
+      "description": "Comic panel illustration with narrative focus."
     },
     {
       "src": "./Images/MyArt_15.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Weapon Design",
+      "projects": [ "All", "My Art", "Digital Art", "Weapon", "Hard Surface" ],
+      "year": 2022,
+      "description": "Fantasy weapon design concepts."
     },
     {
       "src": "./Images/MyArt_16.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "UI Concept",
+      "projects": [ "All", "My Art", "Digital Art", "UI/UX", "Interface Design" ],
+      "year": 2022,
+      "description": "Game interface and UI design concept."
     },
     {
       "src": "./Images/MyArt_17.jpg",
-      "title": "Dungeon Crawler – Level Gen",
-      "projects": [ "All", "My Art" ]
+      "title": "Animation Frame",
+      "projects": [ "All", "My Art", "Digital Art", "Animation", "Keyframe" ],
+      "year": 2023,
+      "description": "Keyframe from animation sequence."
     }
   ]
 }
