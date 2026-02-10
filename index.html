@@ -20,7 +20,7 @@
     <!-- Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Press+Start+2P&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+Runic&family=Press+Start+2P&family=Rubik+Glitch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/icon.png">
 
@@ -141,13 +141,10 @@
     <!-- Projects -->
     <section id="projects" class="max-w-6xl mx-auto px-4 py-32">
         <h2 class="text-3xl font-mono font-semibold mb-10">Projects</h2>
-        <p>
-            -------------------------------------------------------------------------------------------------------
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
+
+        <div class="projectCard">
             <a href="BeeSwarmSim.html"
-               rel="noopener"
-               class="card">
+               rel="noopener">
 
                 <h3 class="text-xl font-mono mb-2">
                     Bee Swarm Simulator
@@ -158,13 +155,9 @@
                 </p>
             </a>
         </div>
-        <p>
-            -------------------------------------------------------------------------------------------------------
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-mono">
+        <div class="projectCard">
             <a href="Dungeon Crawler.html"
-               rel="noopener"
-               class="card">
+               rel="noopener">
 
                 <h3 class="text-xl font-mono mb-2">
                     Dungeon Crawler
@@ -175,13 +168,9 @@
                 </p>
             </a>
         </div>
-        <p>
-            -------------------------------------------------------------------------------------------------------
-        </p>
         <div class="projectCard">
             <a href="SharkBite.html"
-               rel="noopener"
-               class="card">
+               rel="noopener">
 
                 <h3 class="text-xl font-mono mb-2">
                     Shark Bite
@@ -208,41 +197,45 @@
         </div>
     </section>
 
-    <!-- GAMES -->
-    <section id="games" class="max-w-6xl mx-auto px-4 py-32">
-        <h2 class="text-3xl font-mono font-semibold mb-6">Games</h2>
+    <div class="gallery-container">
+    </div>
 
-        <div class="card-grid">
-            <div class="card game-card">
-                <img src="Images/SharkBiteFrontPage.png" alt="Game preview">
-                <div class="card-content">
-                    <h3>Shark Bite</h3>
-                    <a class="btn link-btn" href="https://anidrag.itch.io/game-name" target="_blank">
-                        A group project game with 6 people in the span of 3 week. 
-                        We present a vampire survivor esk game.
-                    </a>
-                </div>
+    <!-- GAMES SECTION -->
+    <section id="games">
+        <div class="gallery-container">
+            <h2 class="text-3xl font-mono font-semibold mb-6">My Games</h2>
+
+            <!-- Platform Filter Buttons (optional) -->
+            <div id="platform-filters" class="flex gap-3 mb-6 flex-wrap font-mono text-sm">
+                <button class="filter-btn-platform" data-platform="All">All</button>
+                <button class="filter-btn-platform" data-platform="Roblox">Roblox</button>
+                <button class="filter-btn-platform" data-platform="PC">PC</button>
+                <button class="filter-btn-platform" data-platform="Mobile">Mobile</button>
+                <button class="filter-btn-platform" data-platform="Unity">Unity</button>
             </div>
-        </div>        
+
+            <!-- Games Grid -->
+            <div id="games-grid" class="games-grid"></div>
+        </div>
     </section>
 
     <!-- UNITY PACKS -->
     <section id="unity-packs" class="max-w-6xl mx-auto px-4 py-32">
         <h2 class="text-3xl font-mono font-semibold mb-6">Unity Packs</h2>
-            <div>
-                <a class="projectCard" href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
-                    <h3>Modular Movement System</h3>
-                    <p>Unity Asset Store</p>
-                </a>
+        <div>
+            <a class="projectCard" href="https://assetstore.unity.com/packages/xxxxx" target="_blank">
+                <h3>Modular Movement System</h3>
+                <p>Unity Asset Store</p>
+            </a>
 
-                <a class="projectCard" href="https://github.com/AniDrag/PackRepo" target="_blank">
-                    <h3>Open-source Pack (WIP)</h3>
-                    <p>GitHub repository</p>
-                </a>
-            </div>
+            <a class="projectCard" href="https://github.com/AniDrag/PackRepo" target="_blank">
+                <h3>Open-source Pack (WIP)</h3>
+                <p>GitHub repository</p>
+            </a>
+        </div>
     </section>
 
-        <!-- JS -->
-        <script src="code.js"></script>
+    <!-- JS -->
+    <script src="code.js"></script>
 </body>
 </html>

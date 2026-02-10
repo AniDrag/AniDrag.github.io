@@ -29,7 +29,18 @@
         body{
             code here,
         }
+
+
+
+        Current fonts: 
+
+        "Crimson Text" --> normal text
+        "Rubik Glitch" --> hacker esk glichy looking text.
+        "Press Start 2P" --> Pixel style text
+        "Noto Sans Runic" --> for runes and stuff
    */
+
+   
 
 
 
@@ -40,9 +51,9 @@
 :root {
     --bg-main: #0a0a0a;
     --bg-panel: #0c051f;
-    --bg-card: #1a1a1a;
+    --bg-card: rgba(10, 25, 47, 0.6);
     --bg-code: #1e1e1e;
-    --accent-purple: #2d1b69;
+    --accent-purple: #3c2c77;
     --accent-blue: #569cd6;
     --terminal-green: #4ec9b0;
     --border-soft: #2a2a2a;
@@ -78,7 +89,7 @@
     backdrop-filter: blur(6px);
 
     background-color: var(--bg-card);
-    border: 2px solid var(--accent-purple);
+    border: 3px solid var(--border-soft);
     backdrop-filter: blur(6px);
     padding: 1.9rem;
     border-radius: 0.75rem;
@@ -178,6 +189,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    margin-top: 100px;
 }
 
 #gallery-grid {
@@ -311,4 +323,191 @@
     text-align: center;
     padding: 3rem;
     grid-column: 1 / -1;
+}
+
+/* =========================================================
+   GAMES GALLERY STYLES
+   ========================================================= */
+
+#games {
+     width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 2rem 1rem;
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border-soft);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-height: 1200px; /* Limit to approximately 3 rows */
+    overflow-y: auto;
+    padding: 1rem;
+    padding-right: 0.5rem;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(45, 27, 105, 0.4);
+    border-color: var(--accent-blue);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover img {
+    transform: scale(1.03);
+}
+
+.game-card h3 {
+    color: var(--text-main);
+    font-size: 1.25rem;
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.game-card .year {
+    color: var(--accent-blue);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.game-card .description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.game-card .platforms {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.game-card .platform {
+    background: var(--accent-purple);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.game-card .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.game-card .tag {
+    background: rgba(86, 156, 214, 0.2);
+    color: var(--accent-blue);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.75rem;
+    font-size: 0.75rem;
+    font-family: "JetBrains Mono", monospace;
+    border: 1px solid var(--accent-blue);
+}
+
+.game-card .play-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-purple);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-top: auto;
+    text-align: center;
+}
+
+.game-card .play-btn:hover {
+    background: transparent;
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.game-card .play-btn::after {
+    content: " ↗";
+    margin-left: 0.25rem;
+    font-size: 1rem;
+}
+
+/* Platform filter buttons */
+#platform-filters {
+    background: var(--bg-card);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--border-soft);
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn-platform {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
+    background: var(--bg-panel);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn-platform:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.filter-btn-platform.active {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    background: rgba(86, 156, 214, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-card {
+        padding: 1.25rem;
+    }
+    
+    .game-card img {
+        height: 180px;
+    }
 }

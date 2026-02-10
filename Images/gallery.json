@@ -135,21 +135,21 @@
     {
       "src": "./Images/MyArt_13.jpg",
       "title": "Architecture Study",
-      "projects": [ "All", "My Art", "Digital Art", "Architecture", "Environment Art" ],
+      "projects": [ "All", "My Art", "Traditional Art" ],
       "year": 2022,
       "description": "Architectural design and perspective study."
     },
     {
       "src": "./Images/MyArt_14.jpg",
       "title": "Comic Art",
-      "projects": [ "All", "My Art", "Digital Art", "Comic", "Illustration" ],
+      "projects": [ "All", "My Art", "Traditional Art" ],
       "year": 2022,
       "description": "Comic panel illustration with narrative focus."
     },
     {
       "src": "./Images/MyArt_15.jpg",
       "title": "Weapon Design",
-      "projects": [ "All", "My Art", "Digital Art", "Weapon", "Hard Surface" ],
+      "projects": [ "All", "My Art", "Traditional Art" ],
       "year": 2022,
       "description": "Fantasy weapon design concepts."
     },

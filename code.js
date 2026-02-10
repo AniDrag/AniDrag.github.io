@@ -124,4 +124,102 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         }
     }
+
+    // Add this to your existing DOMContentLoaded event listener
+    // After the gallery code, add:
+
+    let gamesData = [];
+    let currentPlatformFilter = "All";
+
+    // Load games data
+    fetch("./games.json")
+        .then(res => {
+            if (!res.ok) throw new Error("Games JSON not found");
+            return res.json();
+        })
+        .then(data => {
+            gamesData = data.games;
+            renderGames();
+            setupPlatformFilters();
+        })
+        .catch(err => {
+            console.error("Games load failed:", err);
+            const gamesGrid = document.getElementById("games-grid");
+            if (gamesGrid) {
+                gamesGrid.innerHTML =
+                    '<p class="text-red-400 font-mono text-center py-8">Error loading games. Please check the games.json file.</p>';
+            }
+        });
+
+    function renderGames() {
+        const gamesGrid = document.getElementById("games-grid");
+        if (!gamesGrid) return;
+
+        gamesGrid.innerHTML = "";
+
+        // Filter games by platform
+        const filteredGames = gamesData.filter(game => {
+            if (currentPlatformFilter === "All") return true;
+            return game.platforms && game.platforms.includes(currentPlatformFilter);
+        });
+
+        // Create game cards
+        filteredGames.forEach(game => {
+            const card = document.createElement("div");
+            card.className = "game-card";
+
+            // Create platforms badges
+            const platformsHtml = game.platforms ?
+                game.platforms.map(platform =>
+                    `<span class="platform">${platform}</span>`
+                ).join("") : "";
+
+            // Create tags badges
+            const tagsHtml = game.tags ?
+                game.tags.map(tag =>
+                    `<span class="tag">${tag}</span>`
+                ).join("") : "";
+
+            card.innerHTML = `
+            <img src="${game.src}" alt="${game.title}" loading="lazy">
+            <h3>${game.title}</h3>
+            <div class="year">${game.year}</div>
+            <p class="description">${game.description}</p>
+            
+            ${platformsHtml ? `<div class="platforms">${platformsHtml}</div>` : ''}
+            ${tagsHtml ? `<div class="tags">${tagsHtml}</div>` : ''}
+            
+            <a href="${game.href}" target="_blank" rel="noopener noreferrer" class="play-btn">
+                Play on itch.io
+            </a>
+        `;
+
+            gamesGrid.appendChild(card);
+        });
+
+        // If no games found
+        if (filteredGames.length === 0) {
+            gamesGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                <p class="font-mono text-text-muted">No games found for "${currentPlatformFilter}" platform.</p>
+            </div>
+        `;
+        }
+    }
+
+    function setupPlatformFilters() {
+        const filterButtons = document.querySelectorAll(".filter-btn-platform");
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                currentPlatformFilter = btn.dataset.platform;
+
+                // Update active button
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                renderGames();
+            });
+        });
+    }
 });
