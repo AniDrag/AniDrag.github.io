@@ -7,7 +7,7 @@
       "year": 2022,
       "href": "https://beeswarm.itch.io",
       "platforms": [ "Unity", "PC" ],
-      "tags": [ "Multiplayer", "3D", "Adventure", "Simulation" ]
+      "tags": [ "Concept - Multiplayer", "3D", "Adventure", "Simulation", "Concept" ]
     },
     {
       "src": "./Images/HighRezLogo.png",
@@ -15,8 +15,8 @@
       "description": "A rogue-like dungeon crawler with challenging combat, and deep character progression system.",
       "year": 2021,
       "href": "https://anidrag.itch.io/dungeon-crawler",
-      "platforms": [ "PC", "Mac" ],
-      "tags": [ "Rogue-like", "Action", "RPG" ]
+      "platforms": [ "Unity", "PC" ],
+      "tags": [ "Rogue-lite", "Action", "RPG", "FPS" ]
     },
     {
       "src": "./Images/SharkBiteBanner.jpg",
@@ -24,8 +24,8 @@
       "description": "Fast-paced multiplayer survival game where players either hunt as sharks or survive as humans on various oceanic maps.",
       "year": 2023,
       "href": "https://anidrag.itch.io/shark-shooter",
-      "platforms": [ "Unity", "PC", "Rouge" ],
-      "tags": [ "Singleplayer", "Survival", "Action", "Rouge" ]
+      "platforms": [ "Unity", "PC", "Mobile" ],
+      "tags": [ "Singleplayer", "Survival", "Action", "Rouge", "Concept" ]
     }
   ]
 }
