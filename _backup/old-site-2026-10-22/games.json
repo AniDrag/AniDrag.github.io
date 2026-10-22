@@ -1,0 +1,31 @@
+{
+  "games": [
+    {
+      "src": "./Images/BeeSwarmSimBanner.png",
+      "title": "Bee Swarm Simulator",
+      "description": "A 3D multiplayer game where players collect bees, explore vibrant world, and defeat bosses and wawes of enemies in defense ot your base.",
+      "year": 2022,
+      "href": "https://beeswarm.itch.io",
+      "platforms": [ "Unity", "PC" ],
+      "tags": [ "Concept - Multiplayer", "3D", "Adventure", "Simulation", "Concept" ]
+    },
+    {
+      "src": "./Images/HighRezLogo.png",
+      "title": "Dungeon Crawler",
+      "description": "A rogue-like dungeon crawler with challenging combat, and deep character progression system.",
+      "year": 2021,
+      "href": "https://anidrag.itch.io/dungeon-crawler",
+      "platforms": [ "Unity", "PC" ],
+      "tags": [ "Rogue-lite", "Action", "RPG", "FPS" ]
+    },
+    {
+      "src": "./Images/SharkBiteBanner.jpg",
+      "title": "Shark Bite",
+      "description": "Fast-paced multiplayer survival game where players either hunt as sharks or survive as humans on various oceanic maps.",
+      "year": 2023,
+      "href": "https://anidrag.itch.io/shark-shooter",
+      "platforms": [ "Unity", "PC", "Mobile" ],
+      "tags": [ "Singleplayer", "Survival", "Action", "Rouge", "Concept" ]
+    }
+  ]
+}

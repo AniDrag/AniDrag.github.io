@@ -1,0 +1,4 @@
+exclude:
+  - _backup
+  - README.md
+  - README_HOW_TO_USE.txt
